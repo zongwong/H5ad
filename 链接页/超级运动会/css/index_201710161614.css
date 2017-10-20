@@ -1,0 +1,415 @@
+body {
+    width: 100%;
+    overflow-x: scroll
+}
+
+.wrap {
+    overflow: hidden;
+    width: 3.5rem;
+    height: 5.15rem;
+    max-height: 5.15rem;
+    background-image: url(../imgs/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+.wrap .ball, .wrap .leg1, .wrap .leg2, .wrap .racket1, .wrap .racket2, .wrap .redpack, .wrap .text-4g, .wrap .wave, .wrap .wave-bottom {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute
+}
+
+.wrap .racket1 {
+    width: .435rem;
+    height: .445rem;
+    background-image: url(../imgs/racket1.png);
+    top: 1.04rem;
+    left: .155rem;
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-animation: racket1 2s infinite -.1s;
+    animation: racket1 2s infinite -.1s
+}
+
+@-webkit-keyframes racket1 {
+    0%, 20% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    10% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg)
+    }
+
+}
+
+@keyframes racket1 {
+    0%, 20% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    10% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg)
+    }
+
+}
+
+.wrap .wave-bottom {
+    width: .665rem;
+    height: .26rem;
+    background-image: url(../imgs/bottom.png);
+    top: 2.58rem;
+    left: .895rem;
+    z-index: 10
+}
+
+.wrap .racket2 {
+    width: .335rem;
+    height: .49rem;
+    background-image: url(../imgs/racket2.png);
+    top: 1.575rem;
+    left: 2.31rem;
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    -webkit-animation: racket2 2s infinite .9s;
+    animation: racket2 2s infinite .9s
+}
+
+@-webkit-keyframes racket2 {
+    0%, 20% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+
+    10% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+}
+
+@keyframes racket2 {
+    0%, 20% {
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg)
+    }
+
+    10% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+}
+
+.wrap .leg1 {
+    width: .105rem;
+    height: .175rem;
+    background-image: url(../imgs/leg1.png);
+    top: 1.37rem;
+    left: 1.06rem;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation: leg1 2s infinite -.2s;
+    animation: leg1 2s infinite -.2s
+}
+
+@-webkit-keyframes leg1 {
+    0%, 40% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg)
+    }
+
+    20% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+}
+
+@keyframes leg1 {
+    0%, 40% {
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg)
+    }
+
+    20% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+}
+
+.wrap .leg2 {
+    width: .09rem;
+    height: .195rem;
+    background-image: url(../imgs/leg2.png);
+    top: 1.84rem;
+    left: 3.14rem;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation: leg1 2s infinite .8s;
+    animation: leg1 2s infinite .8s
+}
+
+.wrap .ball {
+    width: .235rem;
+    height: .235rem;
+    background-image: url(../imgs/ball.png);
+    top: .9rem;
+    left: .25rem;
+    -webkit-transform-origin: .95rem 1.2rem;
+    transform-origin: .95rem 1.2rem;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-animation: ball 2s infinite;
+    animation: ball 2s infinite
+}
+
+@-webkit-keyframes ball {
+    0%, 100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    50% {
+        -webkit-transform: rotate(106deg);
+        transform: rotate(106deg)
+    }
+
+}
+
+@keyframes ball {
+    0%, 100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    50% {
+        -webkit-transform: rotate(106deg);
+        transform: rotate(106deg)
+    }
+
+}
+
+.wrap .wave {
+    width: .675rem;
+    height: .52rem;
+    background-image: url(../imgs/wave.png);
+    top: 2.29rem;
+    left: .89rem;
+    background-position-y: 0;
+    -webkit-animation: changeBg 1s steps(4) infinite;
+    animation: changeBg 1s steps(4) infinite
+}
+
+@-webkit-keyframes changeBg {
+    0% {
+        background-position-y: 0
+    }
+
+    100% {
+        background-position-y: 100%
+    }
+
+}
+
+@keyframes changeBg {
+    0% {
+        background-position-y: 0
+    }
+
+    100% {
+        background-position-y: 100%
+    }
+
+}
+
+.wrap .text-4g {
+    width: .335rem;
+    height: .295rem;
+    background-image: url(../imgs/4G.png);
+    top: 2.365rem;
+    left: .97rem
+}
+
+.wrap .redpack {
+    width: .4rem;
+    height: .455rem;
+    background-image: url(../imgs/redpack.png);
+    top: 2.345rem;
+    left: .555rem;
+    z-index: 10
+}
+
+.wrap .phone1, .wrap .phone2 {
+    width: 1.595rem;
+    height: .99rem;
+    top: 2.91rem;
+    left: .38rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute
+}
+
+.wrap .phone1 {
+    background-image: url(../imgs/phone1.png);
+    z-index: 10
+}
+
+.wrap .phone2 {
+    background-image: url(../imgs/phone2.png);
+    z-index: 0;
+    -webkit-animation: showBg 1s infinite;
+    animation: showBg 1s infinite
+}
+
+@-webkit-keyframes showBg {
+    0%, 100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+}
+
+@keyframes showBg {
+    0%, 100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+}
+
+.wrap .run {
+    width: .44rem;
+    height: .65rem;
+    background-image: url(../imgs/run.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2.335rem;
+    left: 2.925rem;
+    -webkit-animation: changeBg steps(4) 1s infinite;
+    animation: changeBg steps(4) 1s infinite
+}
+
+.wrap .hand {
+    width: .245rem;
+    height: .305rem;
+    background-image: url(../imgs/hand.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-animation: aniHand 1s infinite;
+    animation: aniHand 1s infinite
+}
+
+@-webkit-keyframes aniHand {
+    0%, 100% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(.05rem) translateY(.05rem);
+        transform: translateX(.05rem) translateY(.05rem)
+    }
+
+}
+
+@keyframes aniHand {
+    0%, 100% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(.05rem) translateY(.05rem);
+        transform: translateX(.05rem) translateY(.05rem)
+    }
+
+}
+
+.wrap .hand1 {
+    position: absolute;
+    top: 1.525rem;
+    left: 2.075rem
+}
+
+.wrap .hand2 {
+    position: absolute;
+    top: 2.9rem;
+    left: 2.09rem
+}
+
+.wrap .hand3 {
+    position: absolute;
+    top: 3.9rem;
+    left: 2.85rem
+}
+
+.wrap .hand4 {
+    position: absolute;
+    top: 4.05rem;
+    left: 1.375rem
+}
+
+.wrap .section1 {
+    width: 2.64rem;
+    height: 1.335rem;
+    position: absolute;
+    top: 1.005rem;
+    left: .44rem;
+    z-index: 50
+}
+
+.wrap .section2 {
+    width: 1.21rem;
+    height: 1.15rem;
+    position: absolute;
+    top: 1.88rem;
+    left: .525rem;
+    z-index: 60
+}
+
+.wrap .section2 .extend {
+    width: 1.05rem;
+    height: .675rem;
+    position: absolute;
+    left: 1.17rem;
+    bottom: 0
+}
+
+.wrap .section3 {
+    width: 1rem;
+    height: 2.25rem;
+    position: absolute;
+    top: 2.16rem;
+    left: 2.5rem;
+    z-index: 70;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg)
+}
+
+.wrap .section4 {
+    width: 1.75rem;
+    height: 1.4rem;
+    position: absolute;
+    top: 2.925rem;
+    left: .35rem;
+    z-index: 80
+}

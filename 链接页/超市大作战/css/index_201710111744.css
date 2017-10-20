@@ -1,0 +1,767 @@
+.wrap, .wrap .lift-box .lift, .wrap .lift-box .lift-bg, .wrap .man, .wrap .section1-bg .redpack, .wrap .section1-bg .screen, .wrap .section2 .tank, .wrap .section3 .food, .wrap .section3 .food-bg, .wrap .text, .wrap .title {
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 5.15rem;
+    max-height: 5.15rem;
+    background-image: url(../imgs/bg.jpg);
+    position: relative
+}
+
+.wrap.no-click:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200
+}
+
+.wrap .title {
+    width: 2.27rem;
+    height: .86rem;
+    background-image: url(../imgs/title1.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-animation: animateTitle .6s steps(1) infinite;
+    animation: animateTitle .6s steps(1) infinite
+}
+
+@-webkit-keyframes animateTitle {
+    50% {
+        background-image: url(../imgs/title2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/title1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@keyframes animateTitle {
+    50% {
+        background-image: url(../imgs/title2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/title1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+.wrap .lift-box {
+    width: .61rem;
+    height: .8rem;
+    position: absolute;
+    top: 1.84rem;
+    left: 1.145rem
+}
+
+.wrap .lift-box .lift {
+    width: .55rem;
+    height: .8rem;
+    background-image: url(../imgs/lift1.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-animation: animateLift 1s steps(1) infinite;
+    animation: animateLift 1s steps(1) infinite
+}
+
+.wrap .lift-box .lift-bg {
+    width: .52rem;
+    height: .765rem;
+    background-image: url(../imgs/lift_bg.png);
+    position: absolute;
+    top: .04rem;
+    left: .09rem;
+    z-index: 20
+}
+
+@-webkit-keyframes animateLift {
+    50% {
+        background-image: url(../imgs/lift2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/lift1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@keyframes animateLift {
+    50% {
+        background-image: url(../imgs/lift2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/lift1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+.wrap .man {
+    width: .28rem;
+    height: .5rem;
+    background-image: url(../imgs/man.png);
+    position: absolute;
+    top: 2.575rem;
+    left: 0;
+    z-index: 210
+}
+
+.wrap .box, .wrap .light-bg {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.wrap .light-bg {
+    width: 2.615rem;
+    height: 3.12rem;
+    background-image: url(../imgs/light_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0
+}
+
+.wrap .box {
+    width: 100%;
+    height: 100%;
+    z-index: 100
+}
+
+.wrap .section1, .wrap .section1-bg {
+    width: 1.5rem;
+    height: 1rem;
+    top: .955rem;
+    left: 1.435rem;
+    position: absolute
+}
+
+.wrap .section1 {
+    z-index: 200
+}
+
+.wrap .section1-bg .redpack {
+    width: .34rem;
+    height: .215rem;
+    background-image: url(../imgs/redpack.png);
+    position: absolute;
+    top: .68rem;
+    left: .785rem;
+    -webkit-animation: animateRedpack 1s infinite;
+    animation: animateRedpack 1s infinite
+}
+
+.wrap .section1-bg .screen {
+    width: .15rem;
+    height: .145rem;
+    background-image: url(../imgs/screen1.png);
+    position: absolute;
+    top: .28rem;
+    left: .5rem;
+    -webkit-animation: animateScreen 1s infinite;
+    animation: animateScreen 1s infinite
+}
+
+@-webkit-keyframes animateRedpack {
+    100% {
+        -webkit-transform: translateX(-.13rem) translateY(.065rem);
+        transform: translateX(-.13rem) translateY(.065rem)
+    }
+
+}
+
+@keyframes animateRedpack {
+    100% {
+        -webkit-transform: translateX(-.13rem) translateY(.065rem);
+        transform: translateX(-.13rem) translateY(.065rem)
+    }
+
+}
+
+@-webkit-keyframes animateScreen {
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+
+}
+
+@keyframes animateScreen {
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+
+}
+
+.wrap .section2 {
+    width: 1.15rem;
+    height: 1.305rem;
+    position: absolute;
+    top: 1.56rem;
+    left: 0;
+    z-index: 200
+}
+
+.wrap .section2 .tank {
+    width: .875rem;
+    height: 1.305rem;
+    background-image: url(../imgs/tank1.png);
+    -webkit-animation: animateTank 1s steps(1) infinite;
+    animation: animateTank 1s steps(1) infinite
+}
+
+.wrap .text {
+    width: .205rem;
+    height: .725rem;
+    position: absolute;
+    top: 0;
+    left: .9rem;
+    background-image: url(../imgs/huaf_text2.png);
+    -webkit-animation: animateHuaf 1s steps(1) infinite;
+    animation: animateHuaf 1s steps(1) infinite
+}
+
+@-webkit-keyframes animateHuaf {
+    50% {
+        background-image: url(../imgs/huaf_text1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/huaf_text2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@keyframes animateHuaf {
+    50% {
+        background-image: url(../imgs/huaf_text1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/huaf_text2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@-webkit-keyframes animateTank {
+    25% {
+        background-image: url(../imgs/tank2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    50% {
+        background-image: url(../imgs/tank3.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    75% {
+        background-image: url(../imgs/tank4.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/tank1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@keyframes animateTank {
+    25% {
+        background-image: url(../imgs/tank2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    50% {
+        background-image: url(../imgs/tank3.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    75% {
+        background-image: url(../imgs/tank4.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    100% {
+        background-image: url(../imgs/tank1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+.wrap .section3 {
+    width: 1.4rem;
+    height: 1.4rem;
+    position: absolute;
+    top: 2.315rem;
+    left: 1.5rem;
+    z-index: 200
+}
+
+.wrap .section3 .food, .wrap .section3 .food-bg, .wrap .section3 .food-box {
+    width: .355rem;
+    height: .62rem;
+    position: absolute
+}
+
+.wrap .section3 .food-box {
+    top: .185rem;
+    left: .48rem;
+    -webkit-transform-origin: 50% 20%;
+    transform-origin: 50% 20%;
+    -webkit-animation: animateFood 1s infinite;
+    animation: animateFood 1s infinite
+}
+
+.wrap .section3 .food {
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/food1.png);
+    z-index: 20
+}
+
+.wrap .section3 .food-bg {
+    background-image: url(../imgs/food2.png);
+    top: 0;
+    left: 0;
+    -webkit-animation: animateShowHide .5s infinite;
+    animation: animateShowHide .5s infinite;
+    z-index: 10
+}
+
+@-webkit-keyframes animateFood {
+    0%, 100% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg)
+    }
+
+}
+
+@keyframes animateFood {
+    0%, 100% {
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg)
+    }
+
+}
+
+@-webkit-keyframes animateShowHide {
+    0%, 100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+}
+
+@keyframes animateShowHide {
+    0%, 100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+}
+
+.wrap .section4 {
+    width: 1.85rem;
+    height: 1.3rem;
+    position: absolute;
+    top: 3.34rem;
+    left: 0;
+    z-index: 200
+}
+
+.wrap .section4 .card-box {
+    width: 1.05rem;
+    height: .8rem;
+    position: absolute;
+    top: 0;
+    left: .68rem;
+    -webkit-animation: animateFood 1s infinite;
+    animation: animateFood 1s infinite
+}
+
+.wrap .section4 .card, .wrap .section4 .card-bg {
+    width: 1.05rem;
+    height: .8rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap .section4 .card {
+    background-image: url(../imgs/card.png);
+    z-index: 20
+}
+
+.wrap .section4 .card-bg {
+    background-image: url(../imgs/card_bg.png);
+    -webkit-animation: animateShowHide .5s infinite;
+    animation: animateShowHide .5s infinite;
+    z-index: 10
+}
+
+.wrap .section4 .card-box-bg {
+    width: 1.025rem;
+    height: .525rem;
+    background-image: url(../imgs/card_box.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: .49rem;
+    left: .55rem;
+    z-index: 50
+}
+
+.wrap .footer {
+    width: 3.14rem;
+    height: .5rem;
+    background-image: url(../imgs/footer_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 100
+}
+
+.wrap .footer .footer1 {
+    width: .415rem;
+    height: .28rem;
+    position: absolute;
+    top: .135rem;
+    left: .225rem;
+    background-image: url(../imgs/footer1_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -.28rem
+}
+
+.wrap .footer .footer1.active {
+    background-position-y: 0
+}
+
+.wrap .footer .plus1 {
+    width: .15rem;
+    height: .15rem;
+    position: absolute;
+    top: .175rem;
+    left: .655rem;
+    background-image: url(../imgs/plus.png);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap .footer .footer2 {
+    width: .3rem;
+    height: .36rem;
+    position: absolute;
+    top: .095rem;
+    left: .79rem;
+    background-image: url(../imgs/footer2_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -.36rem
+}
+
+.wrap .footer .footer2.active {
+    background-position-y: 0
+}
+
+.wrap .footer .plus2 {
+    width: .15rem;
+    height: .15rem;
+    position: absolute;
+    top: .175rem;
+    left: 1.105rem;
+    background-image: url(../imgs/plus.png);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap .footer .footer3 {
+    width: .335rem;
+    height: .36rem;
+    position: absolute;
+    top: .09rem;
+    left: 1.265rem;
+    background-image: url(../imgs/footer3_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -.36rem
+}
+
+.wrap .footer .footer3.active {
+    background-position-y: 0
+}
+
+.wrap .footer .plus3 {
+    width: .15rem;
+    height: .15rem;
+    position: absolute;
+    top: .175rem;
+    left: 1.605rem;
+    background-image: url(../imgs/plus.png);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap .footer .footer4 {
+    width: .31rem;
+    height: .305rem;
+    position: absolute;
+    top: .115rem;
+    left: 1.78rem;
+    background-image: url(../imgs/footer4__.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 100%
+}
+
+.wrap .footer .footer4.active {
+    background-position-y: 0
+}
+
+.wrap .footer .section5 {
+    width: .67rem;
+    height: .67rem;
+    position: absolute;
+    top: -.24rem;
+    left: 2.255rem;
+    background-image: url(../imgs/goods_car.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -.67rem;
+    pointer-events: none
+}
+
+.wrap .footer .goodscar, .wrap .footer .tips-text {
+    height: .335rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute
+}
+
+.wrap .footer .section5.active {
+    background-position-y: 0;
+    pointer-events: auto;
+    -webkit-animation: activeCar .5s infinite;
+    animation: activeCar .5s infinite
+}
+
+@-webkit-keyframes activeCar {
+    0%, 100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+}
+
+@keyframes activeCar {
+    0%, 100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+}
+
+.wrap .footer .goodscar {
+    width: .365rem;
+    background-image: url(../imgs/goodscard.png);
+    left: 50%;
+    top: 56%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.wrap .footer .tips-text {
+    width: .725rem;
+    background-image: url(../imgs/tips_text_.png);
+    top: -.485rem;
+    left: 2.235rem
+}
+
+.wrap .person {
+    width: .7rem;
+    height: .66rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(2.28rem) translateY(3.6rem);
+    transform: translateX(2.28rem) translateY(3.6rem);
+    z-index: 110
+}
+
+.wrap .person .girl {
+    width: .325rem;
+    height: .66rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-image: url(../imgs/girl0.png);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.wrap .person .car {
+    width: .35rem;
+    height: .365rem;
+    background-image: url(../imgs/car1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: .05rem;
+    left: .12rem;
+    z-index: 10
+}
+
+.wrap .hand {
+    width: .255rem;
+    height: .28rem;
+    background-image: url(../imgs/hand.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 150;
+    -webkit-animation: animateHand 1s infinite;
+    animation: animateHand 1s infinite
+}
+
+@-webkit-keyframes animateHand {
+    0%, 100% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(.05rem) translateY(.05rem);
+        transform: translateX(.05rem) translateY(.05rem)
+    }
+
+}
+
+@keyframes animateHand {
+    0%, 100% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0)
+    }
+
+    50% {
+        -webkit-transform: translateX(.05rem) translateY(.05rem);
+        transform: translateX(.05rem) translateY(.05rem)
+    }
+
+}
+
+.wrap .hand1 {
+    position: absolute;
+    top: 1.8rem;
+    left: 2.32rem
+}
+
+.wrap .hand2 {
+    position: absolute;
+    top: 2.5rem;
+    left: .5rem
+}
+
+.wrap .hand3 {
+    position: absolute;
+    top: 2.775rem;
+    left: 2.16rem
+}
+
+.wrap .hand4 {
+    position: absolute;
+    top: 3.95rem;
+    left: 1.4rem
+}
+
+.wrap .footer-hand {
+    display: none;
+    position: absolute;
+    top: .15rem;
+    left: 2.7rem
+}

@@ -1,0 +1,718 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>追剧领红包</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <!-- 同步 tuia-h5/unit/layout/baseCss.html -->
+    <!-- 活动工具首屏加载公用js、css -->
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201707271400.css">
+    <style>
+    body {
+        background-color: #39b076 !important;
+    }
+
+    .main {
+        background-image: url(./imgs/a9zi1ys58u.webp) !important;
+    }
+
+    .record {
+        background-image: url(./imgs/uodk7qwnwt.webp) !important;
+    }
+
+    .prize-list {
+        background-color: #fc8f3e !important;
+    }
+
+    .prize-tag {
+        background-image: url(./imgs/N11mK1472645269925.webp) !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    .apple {
+        background-color: #fc8f3e !important;
+    }
+
+    .rule {
+        background-image: url(./imgs/rule.webp) !important;
+    }
+
+    .egg {
+        background-image: url(./imgs/egg.webp) !important;
+    }
+
+    .egg.active {
+        background-image: url(./imgs/egg-break.webp) !important;
+    }
+
+    .egg.active.smashed {
+        background-image: url(./imgs/egg-grey.webp) !important;
+    }
+
+    .egg.jump {
+        background-image: url(./imgs/t91fafhtk4.webp) !important;
+    }
+
+    .chuizi {
+        background-image: url(./imgs/fynXq1472645269907.webp) !important;
+    }
+    </style>
+    <style>
+    .prize-list .prize-img-box {
+        border-color: #276c36;
+    }
+    </style>
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #f0b34e !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #f0b34e !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #f7864a !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #ffffff !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content" style="display: block;">
+        <div class="record"></div>
+        <div class="rule"></div>
+        <div class="main">
+            <div style="position: relative">
+                <div class="eggs">
+                    <div class="egg active smashed"></div>
+                    <div class="egg"></div>
+                    <div class="egg"></div>
+                    <div class="egg"></div>
+                    <div class="egg jump"></div>
+                    <div class="egg"></div>
+                    <div class="egg"></div>
+                    <div class="egg"></div>
+                    <div class="egg"></div>
+                </div>
+                <div class="chuizi jump" id="chuizi"></div>
+            </div>
+            <div class="needCredits">今日免费： 8次</div>
+        </div>
+        <div class="prize-list" id="prize-list">
+
+            <div id="prizes-wrapper" style="width: 700px;padding-left: 20px">
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/u58wy99p08.webp"></div>
+                    <p class="prize-name">iPhone7</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/uztk8jh54u.webp"></div>
+                    <p class="prize-name">1000元红包</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/md8kys4ped.webp"></div>
+                    <p class="prize-name">500元红包</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/xhq6rs6wdy.webp"></div>
+                    <p class="prize-name">100元红包</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/xyle2uh30i.webp"></div>
+                    <p class="prize-name">10元红包</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.05rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/ht0osa07at.webp"></div>
+                    <p class="prize-name">幸运福袋</p>
+                </div>
+            </div>
+            <div class="prize-tag"></div>
+        </div>
+        <p class="apple">*奖品和活动均与设备生产商Apple Inc.无关</p>
+    </div>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller">
+                        <p>追剧领红包，领到你手软~</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖~每天可免费参与8次。此活动为概率中奖，奖品数量有限，祝好运！</p>
+                        <p>惊喜一：iPhone7手机</p>
+                        <p>惊喜二：1000元红包</p>
+                        <p>惊喜三：500元红包</p>
+                        <p>惊喜四：100元红包</p>
+                        <p>惊喜五：10元红包</p>
+                        <p>惊喜六：幸运福袋</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659或客服QQ：4000806659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <p>iphone7共1份，中奖概率为0.01%</p>
+                                <p>1000元红包共2份，中奖概率为0.03%</p>
+                                <p>500元红包共5份，中奖概率为0.05%</p>
+                                <p>100元红包共10份，中奖概率为0.07%</p>
+                                <p>10元红包共100份，中奖概率为0.09%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/recommend.css">
+        <!-- <link rel="stylesheet" href="./css/index_201709290000.css"> -->
+    </div>
+
+<!-- 侧边悬浮小人 -->
+<a class="buoy" style="display:block;"><style>
+    .buoy-box {
+      position: absolute;
+      right: .05rem;
+      top: 3.9rem;
+      width: .65rem;
+      height: .65rem;
+      z-index: 1000;
+    }
+    .buoy-box .girl {
+      width: 0.395rem;
+      height: 0.78rem;
+      background:url('./imgs/girl1.png');
+      background-size: cover;
+      position: absolute;
+      transform-origin: top center;
+      transform: scale(0);
+      bottom: 0;
+      left: 0.125rem;
+      animation: buoyGirl linear 2s 1;
+    }
+    @keyframes buoyGirl {
+      0% {
+        transform: scale(1) translateY(-0.2rem) translateX(0.16rem) rotate(-36deg);
+      }
+      20% {
+        transform: scale(1) translateY(-0.2rem) translateX(0) rotate(-36deg);
+      }
+      30% {
+        transform: scale(1) translateY(-0.2rem) translateX(0) rotate(0);
+      }
+      65% {
+        background: url('./imgs/girl1.png');
+        background-size: cover;
+        transform: scale(1) translateY(0) translateY(0) rotate(0);
+      }
+      65.1% {
+        background: url('./imgs/girl2.png');
+        background-size: cover;
+        transform: scale(1) translateY(0) translateY(0) rotate(0);
+      }
+      89.9% {
+        background: url('./imgs/girl2.png');
+        background-size: cover;
+        transform: scale(1) translateY(0) translateY(0) rotate(0);
+      }
+      90% {
+        background: url('./imgs/girl1.png');
+        background-size: cover;
+        transform: scale(1) translateY(0) translateY(0) rotate(0);
+      }
+      100% {
+        transform: scale(1) translateY(0) translateY(0) rotate(0);
+      }
+    }
+    .buoy-box .box {
+      transform: scale(0);
+      animation: buoySH 60s infinite 2s;
+    }
+    @keyframes buoySH {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    .buoy-box .redpack {
+      width: 0.28rem;
+      height: 0.345rem;
+      background: url('./imgs/redpack.png');
+      background-size: cover;
+      position: absolute;
+      left: 0.095rem;
+      top: 0.095rem;
+      z-index: 20;
+      animation: buoyUD 0.8s infinite;
+    }
+    .buoy-box .phone {
+      width: 0.265rem;
+      height: 0.435rem;
+      background: url('./imgs/phone.png');
+      background-size: cover;
+      position: absolute;
+      left: 0.335rem;
+      top: 0.05rem;
+      z-index: 10;
+      animation: buoyUD 0.8s infinite 0.4s;
+    }
+    @keyframes buoyUD {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-0.06rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    .buoy-box .btn {
+      width: 0.54rem;
+      height: 0.175rem;
+      background: url('./imgs/btn.png');
+      background-size: cover;
+      position: absolute;
+      left: 50%;
+      top: 0.42rem;
+      transform: translateX(-50%);
+      z-index: 30;
+      animation: buoyScal 0.8s infinite 0.25s 2s;
+    }
+    @keyframes buoyScal {
+      0% {
+        transform: scale(1) translateX(-50%);
+      }
+      50% {
+        transform: scale(1.1) translateX(-50%);
+      }
+      100% {
+        transform: scale(1) translateX(-50%);
+      }
+    }
+  </style>
+  <div class="buoy-box">
+    <div class="girl"></div>
+    <div class="box">
+      <div class="redpack"></div>
+      <div class="phone"></div>
+      <div class="btn"></div>
+    </div>
+  </div></a>
+<!-- 探寻宝藏 -->
+<a class="buoy" style="display:none;"><style>
+    .buoy-box {
+      position: absolute;
+      right: .05rem;
+      top: 3.9rem;
+      width: .65rem;
+      height: .65rem;
+      z-index: 20;
+    }
+    .rope-box {
+      width: 1rem;
+      height: 4.8rem;
+      position: absolute;
+      top: -3.9rem;
+      left: -1rem;
+      transform: scale(0);
+      -webkit-transform: scale(0);
+      animation: buoy-rope 2s 1;
+      -webkit-animation: buoy-rope 2s 1;
+    }
+    .rope {
+      width: 0.04rem;
+      height: 100%;
+      position: absolute;
+      left: 0.33rem;
+      background: url('./imgs/rope.png') repeat-y;
+    }
+    @keyframes buoy-rope {
+      0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+    }
+    @-webkit-keyframes buoy-rope {
+      0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+      }
+    }
+    .person {
+      width: 0.56rem;
+      height: 1.04rem;
+      background: url('./imgs/person.png');
+      background-size: cover;
+      position: absolute;
+      left: 0.02rem;
+      transform: translateY(3.76rem);
+      animation: buoy-person 1s 1;
+      -webkit-animation: buoy-person 1s 1;
+    }
+    @keyframes buoy-person {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(3.76rem);
+      }
+    }
+    @-webkit-keyframes buoy-person {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(3.76rem);
+      }
+    }
+    .light {
+      width: 0.48rem;
+      height: 0.39rem;
+      background: url('./imgs/light.png') no-repeat;
+      background-size: 0.48rem 0.39rem;
+      position: absolute;
+      opacity: 0;
+      left: 0.51rem;
+      top: 4rem;
+      transform: rotate(-100deg);
+      animation: buoy-light 1s 1 1s;
+      -webkit-animation: buoy-light 1s 1 1s;
+    }
+    @keyframes buoy-light {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes buoy-light {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .buoy-bg {
+      width: .65rem;
+      height: .65rem;
+      background: url('./imgs/box.gif');
+      background-size: cover;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      animation: buoy-bg 1.8s 1;
+      -webkit-animation: buoy-bg 1.8s 1;
+    }
+    @keyframes buoy-bg {
+      0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+      100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+    }
+    @-webkit-keyframes buoy-bg {
+      0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+      100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+      }
+    }
+  </style>
+  <div class="buoy-box">
+    <div class="rope-box">
+      <div class="rope"></div>
+      <div class="person"></div>
+      <div class="light"></div>
+    </div>
+    <div class="buoy-bg"></div>
+  </div>
+</a>
+
+
+
+    <!-- 小丑 -->
+    <a class="buoy" style="display:none;">
+    <style>
+    .movie-box {
+      width: 2.485rem;
+      height: 2.335rem;
+      background: url('./imgs/movie.png');
+      background-size: cover;
+      position: absolute;
+      top: 0.5rem;
+      left: 50%;
+      z-index: 1000;
+      transform: translateX(-50%) scale(0);
+      animation: buoyChangeBg 2s steps(9) 1;
+    }
+    @keyframes buoyChangeBg {
+      0% {
+        transform: translateX(-50%) scale(1);
+        background-position-y: 0;
+      }
+      100% {
+        transform: translateX(-50%) scale(1);
+        background-position-y: 100%;
+      }
+    }
+    .buoy-box {
+      position: absolute;
+      right: .05rem;
+      top: 3.9rem;
+      width: .65rem;
+      height: .65rem;
+      z-index: 1000;
+    }
+    .hotpot {
+      width: 0.63rem;
+      height: 0.64rem;
+      background: url('./imgs/clown_.png');
+      background-size: cover;
+      position: absolute;
+      left: 0.07rem;
+      top: -0.05rem;
+      transform: scale(0);
+      animation: buoyHotpot 1s infinite 2s;
+    }
+    @keyframes buoyHotpot {
+      0% {
+        transform: translateY(-0.03rem) scale(1);
+      }
+      50% {
+        transform: translateY(0.03rem) scale(1);
+      }
+      100% {
+        transform: translateY(-0.03rem) scale(1);
+      }
+    }
+  </style>
+    <div class="movie-box"></div>
+  <div class="buoy-box">
+    <div class="hotpot"></div>
+  </div>
+</a>
+<!-- 弹框 -->
+<link rel="stylesheet" href="./css/index_201710111020.css">
+<div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+    <div class="coupon-modal-animate">
+        <div class="coupon-modal-showPrize-dialog">
+            <span class="close coupon-modal-close"></span>
+            <div class="modal-light">
+                <div class="l-shine"></div>
+            </div>
+            <div class="modal-header"></div>
+            <div class="modal-body withoutCode">
+                <div class="body-header"></div>
+                <div class="coupon-wrapper">
+                    <div class="coupon-image">
+                        <img class="J_gotoDetail logandgo" data-pic="true" src="./imgs/imktfe4lw5.gif">
+                    </div>
+                </div>
+                <div class="body-footer">
+                    <span class="coupon-win"></span>
+                    <h3 class="coupon-name"><span>微信赚大钱如此简单</span></h3>
+                    <button type="button" class="J_btnCoupon coupon-use"><span>立即赚钱</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 推荐弹框 -->
+<div id="recommend-modal" class="recommend-modal" style="display: none;">
+    <div class="recommend-modal-dialog"> <i class="close"></i>
+        <div class="recommend-body1">
+            <a class="fuli" href=""></a>
+            <a class="recommend-li" href="">
+                <i class="recommend-btn"></i><img src="./imgs/1g73xlsj7o.webp">
+            </a>
+            <a class="recommend-li" href="">
+                <i class="recommend-btn"></i><img src="./imgs/5snkrhzons.webp">
+            </a>
+        </div>
+    </div>
+</div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/iscroll.js"></script>
+    <script>
+      
+        var itemWidth = $('.prize-item').outerWidth();
+        $('#prizes-wrapper').css({'width':itemWidth*($('#prizes-wrapper').children().length+1)})
+        new IScroll('#prize-list',{ scrollX: true, scrollY: false, mouseWheel: true ,scrollbars: true})
+
+
+        var game = {
+            eggtimer:null,
+            chuizitimer:null,
+            index:0,
+            okegg:[],
+            getOkegg:function(){
+              var $eggs = $('.egg');
+                  game.okegg = [];
+              $eggs.each(function(){
+                  if (!$(this).hasClass('smashed')) {
+                      game.okegg.push($(this))
+                  }
+              })
+            },
+            eggJump:function(){
+              if (!game.okegg.length) {
+                $('.egg').removeClass('jump');
+                clearInterval(game.eggtimer);
+                alert('砸完了');
+                return false;
+              }
+
+              if (game.okegg.length!==1) {
+                game.okegg[game.index].addClass('jump').siblings().removeClass('jump');
+              }else{
+                
+                setInterval(function(){
+                    game.okegg[0].addClass('jump')
+                    setTimeout(function(){
+                      game.okegg[0].removeClass('jump')
+                    }, 300);
+                }, 600);
+              }
+              
+              game.index+=1;
+              if (game.index===(game.okegg.length)) {
+                  game.index=0;
+              }
+            },
+            start:function(){
+                game.getOkegg();
+                
+                this.eggtimer = setInterval(game.eggJump, 400);
+
+                this.chuizitimer = setInterval(function(){
+                    $('.chuizi').addClass('jump');
+                    setTimeout(function(){
+                      $('.chuizi').removeClass('jump');
+                    }, 300);
+                }, 500);
+
+                for (var i = 0; i < game.okegg.length; i++) {
+                  $(game.okegg[i]).on('click',game.eggClick)
+                }
+            },
+            eggClick:function(){
+              var $this = $(this);
+              clearInterval(game.eggtimer);
+              var chuiziPos = $('.chuizi').position();
+              var left = $this.position().left+$this.width()/2;
+              var top = $this.position().top+$this.height()/2-40;
+              $('.chuizi').animate({
+                top:top,
+                left:left
+              },function(){
+                setTimeout(function(){
+                  $this.addClass('active smashed');
+                }, 1000);
+              })
+              
+              setTimeout(function(){
+                $('.chuizi').css({
+                  top: chuiziPos.top,
+                  left: chuiziPos.left
+                })
+              }, 2000);
+              
+
+              setTimeout(function(){
+                game.getOkegg();
+                game.index = 0;
+                game.eggtimer = setInterval(game.eggJump, 400);
+              },4000);
+            }
+        }
+        game.start();
+    </script>
+</body>
+
+</html>

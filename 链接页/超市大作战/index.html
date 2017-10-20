@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection">
+
+    <title>超市大作战~</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+
+</head>
+
+<body>
+    <!--自定制 -->
+    <link rel="stylesheet" href="./css/reset_4af1ff9.css">
+    <link rel="stylesheet" href="./css/index_201710111744.css">
+    <div class="wrap">
+        <div class="hand1 hand"></div>
+        <div class="hand2 hand"></div>
+        <div class="hand3 hand"></div>
+        <div class="hand4 hand"></div>
+        <div class="title"></div>
+        <div class="lift-box">
+            <div class="lift"></div>
+            <div class="lift-bg"></div>
+        </div>
+        <div class="man"></div>
+        <div class="light-bg"></div>
+        <!-- <div class="section section1 show"></div> -->
+        <div class="box">
+            <a href="/" class="section1-bg">
+                <div class="screen"></div>
+                <div class="redpack"></div>
+            </a>
+        
+            <a href="/" class="section section2 show">
+                <div class="tank"></div>
+                <div class="text"></div>
+            </a>
+            <a href="/" class="section section3 show">
+                <div class="food-box">
+                    <div class="food"></div>
+                    <div class="food-bg"></div>
+                </div>
+            </a>
+            <a href="/" class="section section4 show">
+                <div class="card-box">
+                    <div class="card"></div>
+                    <div class="card-bg"></div>
+                </div>
+                <div class="card-box-bg"></div>
+            </a>
+        </div>
+        <div class="footer">
+            <div class="footer-hand hand" style="display: block;"></div>
+            <div class="footer1 active"></div>
+            <div class="plus plus1"></div>
+            <div class="footer2 active"></div>
+            <div class="plus plus2"></div>
+            <div class="footer3 active"></div>
+            <div class="plus plus3"></div>
+            <div class="footer4 active"></div>
+            <div class="section section5 active show">
+                <div class="goodscar"></div>
+            </div>
+            <div class="tips-text"></div>
+        </div>
+        <div class="person">
+            <div class="girl"></div>
+            <div class="car"></div>
+        </div>
+    </div>
+<!-- 抽奖 -->
+  <link rel="stylesheet" href="css/index_201710091523.css">
+  <div id="popup" class="plugin-act-popup"  style="display: none;">
+      <div class="popup-shadow"></div>
+      <div class="close plugin-act-close"></div>
+      <!-- 主页面布局 -->
+      <div class="plugin-popup-mc">
+          <div class="popup-mc-h">
+              <div class="btn-rules"></div>
+          </div>
+          <div class="popup-mc-cont">
+          </div>
+          <div class="plugin-act-btn"></div>
+      </div>
+      <!-- 规则 -->
+      <div class="plugin-rules hide">
+          <div class="rules-close"></div>
+          <div class="rules-content">
+              <div class="title"></div>
+              <div class="box">
+                  <ul>
+                      <li>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</li>
+                      <li>2、优惠券类奖品的使用规则详见每个优惠券的介绍页 </li>
+                      <li>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：
+                          <br> 4000-80-6659或客服QQ：
+                          <br> 4000806659（工作日9:00至18:00）
+                      </li>
+                      <li>4、通过非法途径获得奖品的，主办方有权不提供奖品</li>
+                  </ul>
+                  <div class="btn-more">
+                      更多概率说明
+                      <i class="icon-more"></i>
+                  </div>
+                  <div class="more-content" style="overflow-y: scroll">
+                      <p class="more-li">1. 购物卡共40份，中奖概率0.01%</p>
+                      <p class="more-li">2. 话费流量包共50份，中奖概率0.03%</p>
+                      <p class="more-li">3. 美食礼包共50份，中奖概率0.03%</p>
+                      <p class="more-li">4. 支付宝红包共110份，中奖概率0.05%</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- 未中奖 -->
+      <div class="nonepack hide">
+          <div class="cry"></div>
+          <div class="btn-nonepack playagain"></div>
+      </div>
+      <!-- 已中奖 -->
+      <div class="winred hide" style="display: block;">
+        <div class="win-content">
+          <div class="content">
+            <a class="order"><img src="//yun.duiba.com.cn/tuia/img/9h0cx0nfn6.gif"></a>
+            <div class="decs">玩微信帮你赚零花钱</div>
+            <a class="plugin-coupon-btn" href="javascript:void(0);"></a>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>话费到账啦</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201709141400.css">
+    <style>
+    .main {
+        background-image: url(./imgs/1zdib4ks3p.webp) !important;
+    }
+
+    body {
+        background-color: #6784b7 !important;
+    }
+
+    .record {
+        background-image: url(./imgs/yjp415qhh4.webp) !important;
+    }
+
+    .rule {
+        background-image: url(./imgs/8e9c36atxw.webp) !important;
+    }
+
+    .prize-tag {
+        background-image: url(./imgs/r1CRf1476708099539.webp) !important;
+    }
+
+    .prize-list {
+        background-color: #4870b3 !important;
+    }
+
+    .prize-list .prize-img-box {
+        background-color: #fff !important;
+    }
+
+    .prize-list .prize-img-box,
+    .prize-list {
+        border-color: #592006 !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    .apple {
+        background-color: #9d5627 !important;
+    }
+
+    .wawa.box1 .prize {
+        background-image: url(./imgs/z2xh7tomrr.webp) !important;
+    }
+
+    .wawa.box2 .prize {
+        background-image: url(./imgs/sdskbg8p3g.webp) !important;
+    }
+
+    .wawa.box3 .prize {
+        background-image: url(./imgs/mv7i2x7baa.webp) !important;
+    }
+
+    .mactop {
+        background-image: url(./imgs/hems3ltj9j.webp) !important;
+    }
+
+    .macborder {
+        background-image: url(./imgs/al5k6w7dp8.webp) !important;
+    }
+
+    .macbg {
+        background-image: url(./imgs/tr2oiettmq.webp) !important;
+    }
+
+    .conveyorBelt {
+        background-image: url(./imgs/pxildqdzl1.webp) !important;
+    }
+
+    .conveyorBelt.backward .maoding i,
+    .conveyorBelt.forward .maoding i {
+        background-image: url(./imgs/xsitw84kei.webp) !important;
+    }
+
+    .start {
+        background-image: url(./imgs/18m781mxeq.webp) !important;
+    }
+
+    .start:active {
+        /*background-image: url(./imgs/ig3g0kg6uq.webp) !important;*/
+    }
+
+    .start[disabled] {
+        background-image: url(./imgs/ny2vcxc5iv.webp) !important;
+    }
+    </style>
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #446194 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #446194 !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #6784b7 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #ffffff !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content" class="">
+        <div class="main">
+            <div class="record"></div>
+            <div class="rule"></div>
+            <div class="dollMac">
+                <div class="macbg"></div>
+                <div class="conveyorBelt backward">
+                    <div class="maoding"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <div class="mask"></div>
+                    <!-- 后排 -->
+                    <div class="wawas">
+                        <div class="wawa box1" style="transform: translate3d(-54.4922px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/thanks.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                        <div class="wawa box3" style="transform: translate3d(-54.4922px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/7b31hr6u3m.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                        <div class="wawa box3" style="transform: translate3d(-54.4922px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/o1h0e847vg.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conveyorBelt forward">
+                    <div class="maoding"><i></i><i></i><i></i><i></i><i></i></div>
+                    <!-- 前排 -->
+                    <div class="wawas">
+                        <div class="wawa box3" style="transform: translate3d(520.313px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/7b31hr6u3m.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                        <div class="wawa box2" style="transform: translate3d(520.313px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/o1h0e847vg.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                        <div class="wawa box1" style="transform: translate3d(520.313px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize"><img src="./imgs/lucky.webp"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="macborder"></div>
+                <!-- 181 -->
+                <div class="zhuazi" style="display: block; transform: translate3d(149.158px, 0px, 0px); height: 144.141px; transition: height 1s linear 0s;" stop="true">
+                    <div class="foots">
+                        <div class="left-foot" style="transform: rotate(16deg);"></div>
+                        <div class="right-foot" style="transform: rotate(-16deg);"></div>
+                    </div>
+                    <div class="pole"></div>
+                    <div class="wawa box3" style="display: none;">
+                        <div class="prize"><img src="./imgs/lucky.webp"></div>
+                    </div>
+                </div>
+                <div class="mactop"></div>
+                <button class="start" type="button"></button>
+            </div>
+            <p class="need-credits" style="display: block;">今日免费： 6次</p>
+        </div>
+        <div class="prize-list" id="prize-list">
+            <div id="prizes-wrapper" style="width: 4.55rem; padding-left: 0.3rem; padding-right: 0rem;">
+                <div class="prize-item" style="display: inline-block; margin-right: 0.3rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/kxtvzni9bi.webp"></div>
+                    <p class="prize-name">200元话费</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.3rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/o1h0e847vg.webp"></div>
+                    <p class="prize-name">100元话费</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.3rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/t7akfb2wyx.webp"></div>
+                    <p class="prize-name">2G流量包</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.3rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/7b31hr6u3m.webp"></div>
+                    <p class="prize-name">10元话费</p>
+                </div>
+                <div class="prize-item" style="display: inline-block; margin-right: 0.3rem;">
+                    <div class="prize-img-box"><img class="prize-img" src="./imgs/lucky.webp"></div>
+                    <p class="prize-name">幸运福袋</p>
+                </div>
+            </div>
+            <div class="prize-tag"></div>
+        </div>
+        <div id="active-recommend" class="active-recommend" style="display: none;"></div>
+        <p class="apple" style="display: block;">*奖品和活动均与设备生产商Apple Inc.无关</p>
+    </div>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller" style="transform: translate(0px, 0px) translateZ(0px);">
+                        <p>话费进账户啦，手机满满能量再也不用担心被停机！</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖，每天8次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝好运。</p>
+                        <p>惊喜一：200元支付宝话费</p>
+                        <p>惊喜二：100元支付宝话费</p>
+                        <p>惊喜三：2G全国流量红包</p>
+                        <p>惊喜四：10元支付宝话费</p>
+                        <p>惊喜五：幸运奖</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659或客服QQ：4000806659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <ul>
+                                    <li>200元支付宝话费共5份，中奖概率0.01%</li>
+                                    <li>100元支付宝话费共10份，中奖概率0.02%</li>
+                                    <li>2G全国手机流量共20份，中奖概率0.04%</li>
+                                    <li>10元支付宝话费共100份，中奖概率0.2%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="DB_guide" style="left: 1.78rem; top: 3.52rem; display: none;"><span class="DB_G_circle"></span><span class="DB_G_hand"></span></div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709140000.css">
+        <link rel="stylesheet" href="./css/index_201709141600.css">
+    </div>
+    <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+        <div class="coupon-modal-animate">
+            <span class="close coupon-modal-close"></span>
+            <div class="coupon-modal-showPrize-dialog">
+                <div class="modal-header"></div>
+                <div class="modal-body withoutCode">
+                    <p class="modal-title">微信最能赚钱的3种方式！</p>
+                    <div class="coupon-imageBg">
+                        <div class="coupon-image">
+                            <div class="coupon-background">
+                                <img class="J_gotoDetail logandgo" src="./imgs/fazzspkl2p.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="J_btnCoupon coupon-use">立即领取</button>
+                </div>
+                <div class="scrapBox"><i class="scrap"></i></div><i class="light"></i>
+            </div>
+        </div>
+    </div>
+    <script src="js/iscroll.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    var itemWidth = $('.prize-item').outerWidth();
+    $('#prizes-wrapper').css({ 'width': itemWidth * ($('#prizes-wrapper').children().length + 4) + 20 })
+    new IScroll('#prize-list', { scrollX: true, scrollY: false, mouseWheel: true, scrollbars: true })
+
+
+    $('.start').on('click', function() {
+        var $this = $(this);
+        if ($this.attr('disabled') == 'disabled') {
+            return false;
+        }
+        $this.attr('disabled', 'disabled');
+        var prize = createGift();
+        setTimeout(function(){
+
+          $('.zhuazi').css({
+            height:'255px'
+          })
+        },1400);
+         $('.zhuazi').on('transitionend webkitTransitionEnd',open)
+
+         function open(){
+          console.log('1')
+            var $p = prize.html();prize.remove();
+            $('.zhuazi').find('.wawa').show().empty().append($p);
+            $('.zhuazi').css({
+              height:'144px'
+            })
+            $('.zhuazi').off('transitionend webkitTransitionEnd');
+            $('.zhuazi').on('transitionend webkitTransitionEnd',function(){
+              console.log('end')
+               $('.zhuazi').off('transitionend webkitTransitionEnd');
+            })
+         }
+
+    })
+start()
+function start(){
+  setInterval(function(){
+    createGift();
+  }, 2000);
+}
+
+
+
+function createGift(prize){
+
+    var backtpl = $('<div class="wawa box1" style="transform: translate3d(375px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">'+
+                        '<div class="prize"><img src="./imgs/thanks.webp"></div>'+
+                        '<div class="shadow"></div>'+
+                   '</div>');
+    var forwardtpl = $('<div class="wawa box3" style="transform: translate3d(-40px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">'+
+                          '<div class="prize"><img src="./imgs/7b31hr6u3m.webp"></div>'+
+                          '<div class="shadow"></div>'+
+                      '</div>');
+    $('.forward').find('.wawas').append(forwardtpl);
+    setTimeout(function(){
+      forwardtpl.css({
+        'transform':'translate3d(375px, 0px, 0px)'
+      })
+    },20)
+
+    if (!prize) {
+      forwardtpl.on('transitionend webkitTransitionEnd',function(){
+        $(this).remove();
+        $('.backward').find('.wawas').append(backtpl);
+        setTimeout(function(){
+          backtpl.css({
+            'transform':'translate3d(-40px, 0px, 0px)'
+          })
+        },20)
+        backtpl.on('transitionend webkitTransitionEnd',function(){
+          $(this).remove();
+        })
+      })
+    }
+    return forwardtpl;
+  }
+
+    </script>
+</body>
+
+</html>

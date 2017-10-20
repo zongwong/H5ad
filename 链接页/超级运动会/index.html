@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta content="telephone=no" name="format-detection">
+    <title>超级运动会~</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+</head>
+
+<body>
+    <!--自定制 -->
+    <link rel="stylesheet" href="./css/reset_4af1ff9.css">
+    <link rel="stylesheet" href="./css/index_201710161614.css">
+    <div class="wrap">
+        <div class="racket1"></div>
+        <div class="racket2"></div>
+        <div class="leg1"></div>
+        <div class="leg2"></div>
+        <div class="ball"></div>
+        <div class="wave"></div>
+        <div class="wave-bottom"></div>
+        <div class="text-4g"></div>
+        <div class="redpack"></div>
+        <div class="phone1"></div>
+        <div class="phone2"></div>
+        <div class="run"></div>
+        <div class="hand hand1"></div>
+        <div class="hand hand2"></div>
+        <div class="hand hand3"></div>
+        <div class="hand hand4"></div>
+        <div class="box">
+            <a href="/" class="section section1 show"></a>
+            <a href="/" class="section section2 show">
+                <div class="extend"></div>
+            </a>
+            <a href="/" class="section section3 show"></a>
+            <a href="/" class="section section4 show"></a>
+        </div>
+    </div>
+    <!-- 自定制结束-->
+    <script>
+      window.onload = function(){
+        
+      }
+    </script>
+</body>
+
+</html>

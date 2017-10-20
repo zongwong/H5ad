@@ -1,0 +1,361 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>今年月饼我包了</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <!-- 同步 tuia-h5/unit/layout/baseCss.html -->
+    <!-- 活动工具首屏加载公用js、css -->
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201707271400.css">
+    <style>
+    .banner {
+        background-image: url(./imgs/ynnws3p2og.webp) !important;
+    }
+
+    .boxImg i {
+        background-image: url(./imgs/priyjtsubr.webp) !important;
+    }
+
+    body {
+        background-color: #8b1c16 !important;
+    }
+
+    .main {
+        background-image: url(./imgs/ne8dw8rfcs.webp) !important;
+    }
+
+    .record {
+        background-image: url(./imgs/prize.webp) !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    .apple {
+        background-color: #8b1c16 !important;
+    }
+
+    .rule {
+        background-image: url(./imgs/rule.webp) !important;
+    }
+    </style>
+
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #f08a4a !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #f08a4a !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #f25d1a !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #ffffff !important;
+    }
+    /*+*/
+    .pointer.active{
+        display: inline;
+        transform: translateX(0.8rem);
+        transition: -webkit-transform 0.4s linear 0s;
+    }
+    .box2 i.move{
+        transform: translateY(0.8rem);
+        opacity: 0;
+        transition: all .8s linear;
+    }
+    .ybrotate{animation: ybrotate 2s linear infinite;}
+    @keyframes ybrotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(-10deg);
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(10deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content" style="display: block;">
+        <div class="record"></div>
+        <div class="rule"></div>
+        <div class="main">
+            <div class="banner"></div>
+            <div class="box-container">
+                <div class="boxImg box" id="box"><i class="ybrotate"></i></div>
+                <div class="boxImg rope"><i class="hide"></i></div>
+                <div class="boxImg box2"><i class="hide"></i></div>
+                <div class="needCredits">
+                    <p>今日免费： 7次</p>
+                </div>
+            </div>
+            <div class="leadStart">
+                <i class="lead one"></i>
+                <i class="lead two"></i>
+                <i class="lead three"></i>
+                <i class="lead four"></i>
+                <i class="pointer" style="display: none;"></i>
+            </div>
+            <div class="prize-list">
+                <div class="prize-img-box one">
+                    <img class="prize-img" src="./imgs/ri1s39iki7.png">
+                </div>
+                <div class="prize-img-box two">
+                    <img class="prize-img" src="./imgs/dwx34jq28b.png">
+                </div>
+                <div class="prize-img-box three">
+                    <img class="prize-img" src="./imgs/uhrkuex1a6.png">
+                </div>
+                <div class="prize-img-box four">
+                    <img class="prize-img" src="./imgs/hbypp9xvbv.png">
+                </div>
+                <div class="prize-img-box five">
+                    <img class="prize-img" src="./imgs/ht0osa07at.png">
+                </div>
+            </div>
+        </div>
+        <p class="apple">*奖品和活动均与设备生产商Apple Inc.无关</p>
+    </div>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller">
+                        <p>中秋献礼，今年月饼我包了，大牌月饼唤醒你的温暖记忆~</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖~每天限参与7次，7次机会免费。此活动为概率中奖，奖品数量有限，祝好运！</p>
+                        <p>惊喜一：哈根达斯月饼礼盒</p>
+                        <p>惊喜二：奥利奥月饼礼盒</p>
+                        <p>惊喜三：美心奶黄月饼礼盒</p>
+                        <p>惊喜四：666元中秋团圆红包</p>
+                        <p>惊喜五：幸运福袋</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：4000-80-6659或客服QQ：4000-80-6659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <p>惊喜一：哈根达斯月饼礼盒，共10份，中奖概率为0.02%</p>
+                                <p>惊喜二：奥利奥月饼礼盒，共20份，中奖概率为0.03%</p>
+                                <p>惊喜三：美心奶黄月饼礼盒，共30份，中奖概率为0.05%</p>
+                                <p>惊喜四：666元中秋团圆红包，共5份，中奖概率为0.01%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709140000.css">
+        
+    </div>
+    <!-- 弹框 -->
+    <link rel="stylesheet" href="./css/index_201709141600.css">
+    <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+      <div class="coupon-modal-animate">
+        <span class="close coupon-modal-close"></span>
+        <div class="coupon-modal-showPrize-decorate"></div>
+        <div class="coupon-modal-showPrize-dialog">
+          <div class="modal-header"></div>
+          <div class="modal-body">
+            <h3>恭喜获得一次微信赚钱机会</h3>
+            <div class="coupon-wrapper">
+              <div class="coupon-image">
+                <img class="J_gotoDetail logandgo" data-pic="true" src="./imgs/fhsvexqnwh.jpg">
+              </div>
+              <div class="coupon"></div>
+            </div>
+            <div class="body-footer">
+              <button type="button" class="J_btnCoupon coupon-use"><span>立即赚钱</span></button>
+            </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    <!-- 火锅红包 -->
+    <a class="buoy" style="display:block;">
+        <style>
+        .movie-box {
+            width: 2.04rem;
+            height: 4.525rem;
+            background: url('//yun.yuyiya.com/h5-tuia/buoy/hotpot/img.png');
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: 1000;
+            transform: translateX(-50%) scale(0);
+            animation: buoyChangeBg 3s steps(13) 1;
+        }
+
+        @keyframes buoyChangeBg {
+            0% {
+                transform: translateX(-50%) scale(1);
+                background-position-x: 0;
+            }
+            100% {
+                transform: translateX(-50%) scale(1);
+                background-position-x: 100%;
+            }
+        }
+
+        .buoy-box {
+            position: absolute;
+            right: .05rem;
+            top: 3.9rem;
+            width: .65rem;
+            height: .65rem;
+            z-index: 1000;
+        }
+
+        .hotpot {
+            width: 0.555rem;
+            height: 0.83rem;
+            background: url('//yun.yuyiya.com/h5-tuia/buoy/hotpot/hotpot.png');
+            background-size: cover;
+            position: absolute;
+            left: 0.07rem;
+            top: -0.05rem;
+            transform: scale(0);
+            animation: buoyHotpot 1s infinite 3s;
+        }
+
+        @keyframes buoyHotpot {
+            0% {
+                transform: translateY(-0.03rem) scale(1);
+            }
+            50% {
+                transform: translateY(0.03rem) scale(1);
+            }
+            100% {
+                transform: translateY(-0.03rem) scale(1);
+            }
+        }
+        </style>
+    <div class="movie-box"></div>
+    <div class="buoy-box">
+        <div class="hotpot"></div>
+    </div>
+</a>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script>
+  var $leadStart = $('.leadStart');
+      $lead = $leadStart.find('.lead');
+      $pointer = $leadStart.find('.pointer');
+      var index = 0;
+      moving()
+      function moving(){
+        setTimeout(function change(){
+            $lead.eq(index).show(0).siblings('.lead').hide(0);
+            index+=1;
+            if (index == 4) {
+                index=0;
+                $pointer.hide(0).removeClass('active')
+                clearTimeout(childtimer);
+            }
+            if (index == 2) {
+                $pointer.show(0).addClass('active')
+            }
+            childtimer = setTimeout(change,180)
+        },180);
+      }
+
+      $('#box i').on('touchstart',function(e){
+        console.log(e)
+        var start_x = e.changedTouches[0].pageX;
+
+        $('#box i').on('touchend',function(e){
+            var end_x = e.changedTouches[0].pageX;
+
+            if ((end_x - start_x)>100) {
+                $('#box').hide(0);
+                $('.rope i').removeClass('hide');
+                $('.box2 i').removeClass('hide');
+                $leadStart.hide();
+                setTimeout(function(){
+                    $('.box2 i').addClass('move')
+                }, 100);
+            }
+
+        })
+
+
+      })
+</script>
+</html>

@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>红包无条件送你</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201709140000.css">
+    <style>
+    #fishinggold {
+        background-image: url(./imgs/hp7hesy9mk.webp) !important;
+    }
+
+    .record {
+        background-image: url(./imgs/record.webp) !important;
+    }
+
+    .banner {
+        background-image: url(./imgs/aer7ah99m1.webp) !important;
+    }
+
+    .apple {
+        background-color: #005a7b !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    body {
+        background-color: #005a7b !important;
+    }
+
+    .prizelist {
+        background-color: #004861 !important;
+    }
+
+    .prizelist .prize-tag {
+        background-image: url(./imgs/prizetag.webp) !important;
+    }
+
+    .rule-btn {
+        background-image: url(./imgs/rulebtn.webp) !important;
+    }
+
+    .person-container .platform .person .p1 {
+        background-image: url(./imgs/v3plyxk4q1.webp) !important;
+    }
+
+    .person-container .platform .person .p2 {
+        background-image: url(./imgs/9k3bu3sbev.webp) !important;
+    }
+
+    .person-container .platform .person .p3 {
+        background-image: url(./imgs/1uku61yo3z.webp) !important;
+    }
+
+    .person-container .platform .person .p4 {
+        background-image: url(./imgs/h6rd2cl6xa.webp) !important;
+    }
+
+    .person-container .platform .person .p5 {
+        background-image: url(./imgs/v3plyxk4q1.webp) !important;
+    }
+
+    .sea .prizebox .item .bottle {
+        background-image: url(./imgs/bottle.webp) !important;
+    }
+
+    .person-container .platform .fishing .basket .result.bottle {
+        background-image: url(./imgs/bottle.webp) !important;
+    }
+
+    .sea .prizebox .item .box {
+        background-image: url(./imgs/box.webp) !important;
+    }
+
+    .person-container .platform .fishing .basket .result.box {
+        background-image: url(./imgs/box.webp) !important;
+    }
+
+    .btn .startbtn {
+        background-image: url(./imgs/mifm95cgxj.webp) !important;
+    }
+
+    .btn .startbtn:active {
+        background-image: url(./imgs/7mhyfxbubo.webp) !important;
+    }
+
+    .btn .startbtn[disabled] {
+        background-image: url(./imgs/r30onlt78j.webp) !important;
+    }
+    </style>
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #6d5c00;
+        border-left-color: #6d5c00;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #ffde4d !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #ffde4d !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #6d5c00 !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #6d5c00 !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #6d5c00 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #f2cf2e !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #6d5c00 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #6d5c00 !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content" class="">
+        <div id="fishinggold" style="display: block;" class="">
+            <div class="banner"></div>
+            <a href="javascript:;" class="rule rule-btn"></a>
+            <div class="prize-btn record"></div>
+            <div class="person-container">
+                <div class="table"></div>
+                <div class="platform">
+                    <p class="person">
+                        <i class="p1 hidden"></i>
+                        <i class="p2 hidden"></i>
+                        <i class="p3 hidden"></i>
+                        <i class="p4 hidden"></i>
+                        <i class="p5"></i>
+                    </p>
+                    <!-- pending ani-pole3 ani-basket box 75 85 95-->
+                    <div class="fishing ready">
+                        <div class="pole"></div>
+                        <div class="basket">
+                            <div class="result result-prize"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sea">
+                <div id="wave" class="wave ani-wave"></div>
+                <div class="prizebox mac-container">
+                    <div class="floats">
+                        <!-- <div class="item float row1" data-type="bottle" style="transform: translate3d(0px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize">
+                                <div class="bottle"></div>
+                                <div class="bubble"></div>
+                            </div>
+                        </div>
+                        <div class="item float row1" data-type="bottle" style="transform: translate3d(375px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize">
+                                <div class="bottle"></div>
+                                <div class="bubble"></div>
+                            </div>
+                        </div>
+                        <div class="item float row2" data-type="box" style="transform: translate3d(375px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize">
+                                <div class="box"></div>
+                                <div class="bubble bubble2"></div>
+                            </div>
+                        </div>
+                        <div class="item float row3" data-type="bottle" style="transform: translate3d(375px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize">
+                                <div class="bottle"></div>
+                                <div class="bubble"></div>
+                            </div>
+                        </div>
+                        <div class="item float row3" data-type="bottle" style="transform: translate3d(375px, 0px, 0px); transition: -webkit-transform 5s linear 0s;">
+                            <div class="prize">
+                                <div class="bottle"></div>
+                                <div class="bubble"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <p class="needcredit-container"><span class="needcredit">今日免费： 4次</span></p>
+            <p class="btn">
+                <button class="startbtn">开始捞</button>
+            </p>
+            <div id="prize-list" class="prizelist">
+                <div id="prizes-wrapper" style="padding-left: 0.25rem; padding-right: 0rem;">
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.25rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/dzvj80a9gp.webp"></div>
+                        <p class="prize-name">1000元红包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.25rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/1iegsdtpk1.webp"></div>
+                        <p class="prize-name">500元红包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.25rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/ajzs0gafm9.webp"></div>
+                        <p class="prize-name">200元红包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.25rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/4ct6i375p2.webp"></div>
+                        <p class="prize-name">10元红包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.25rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/g7x4hdsvpm.webp"></div>
+                        <p class="prize-name">幸运福袋</p>
+                    </div>
+                </div>
+                <div class="prize-tag"></div>
+            </div>
+            <p class="apple">*奖品与活动和设备生产商Apple Inc.公司无关</p>
+        </div>
+    </div>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller">
+                        <p>1秒发财，红包无条件送你~</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖~每天可免费参与8次。此活动为概率中奖，奖品数量有限，祝好运！</p>
+                        <p>惊喜一：1000元红包</p>
+                        <p>惊喜二：500元红包</p>
+                        <p>惊喜三：200元红包</p>
+                        <p>惊喜四：10元红包</p>
+                        <p>惊喜五：幸运福袋</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659或客服QQ：4000806659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <p>1000元红包共1份，中奖概率为0.01%</p>
+                                <p>500元红包共2份，中奖概率为0.03%</p>
+                                <p>200元红包共7份，中奖概率为0.05%</p>
+                                <p>10元红包共100份，中奖概率为0.09%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="DB_guide" style="left: 1.4rem; top: 3.9rem; display: none;"><span class="DB_G_circle"></span><span class="DB_G_hand"></span></div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709140000.css">
+        <link rel="stylesheet" href="./css/index_201709290000.css">
+    </div>
+    <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+        <div class="coupon-modal-animate">
+            <div class="coupon-modal-showPrize-dialog">
+                <span class="close coupon-modal-close"></span>
+                <div class="modal-light">
+                    <div class="l-shine"></div>
+                </div>
+                <div class="modal-header"></div>
+                <div class="modal-body withoutCode">
+                    <div class="body-header"></div>
+                    <div class="atmosphere"></div>
+                    <div class="coupon-wrapper">
+                        <div class="coupon-image">
+                            <img class="J_gotoDetail logandgo" src="./imgs/7txrprvald.jpg">
+                        </div>
+                    </div>
+                    <div class="body-footer">
+                        <span class="coupon-win"></span>
+                        <h3 class="coupon-name"><span>证券投资日入过万不是梦</span></h3>
+                        <div class="J_btns">
+                            <button type="button" class="J_btnCoupon coupon-use">
+                                <span>马上赚钱</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="coupon-theme"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/iscroll.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+    var itemWidth = $('.prize-item').outerWidth();
+    $('#prizes-wrapper').css({ 'width': itemWidth * ($('#prizes-wrapper').children().length + 3) + 20 })
+    new IScroll('#prize-list', { scrollX: true, scrollY: false, mouseWheel: true, scrollbars: true })
+
+
+    $('.startbtn').on('click',function(){
+      var $this = $(this);
+      if ($this.attr('disabled') == 'disabled') {
+        return false;
+      }
+      $this.attr('disabled','disabled');
+
+      var prize = createGift(3,1,true);
+      
+      $('.fishing').removeClass('ready').addClass('ani-pole1');
+      $('.basket').addClass('ani-basket');
+      
+      $('.fishing').on('animationend webkitAnimationEnd',function(){
+        prize.remove();
+        $('.result').addClass('box');
+        // alert('恭喜获奖')
+      })
+      
+    })
+
+    function createGift(rowindex,index,prize){
+      var row = 'row'+rowindex;
+      var type = [{bg:'bottle',item:'bubble'},{bg:'box',item:'bubble bottle2'}]
+      var tpl = $('<div class="item float '+row+'" data-type="bottle" style="transform: translate3d(0px, 0px, 0px);transition: transform 5s linear 0s;">'+
+              '<div class="prize">'+
+                  '<div class="'+type[index].bg+'"></div>'+
+                  '<div class="'+type[index].item+'"></div>'+
+              '</div>'+
+          '</div>');
+      $('.floats').append(tpl);
+      setTimeout(function(){
+        tpl.css({
+          'transform':'translate3d(375px, 0px, 0px)'
+        })
+      },20)
+      if (!prize) {
+        tpl.on('transitionend webkitTransitionEnd',function(){
+          $(this).remove();
+        })
+      }
+      return tpl;
+    }
+
+    setInterval(function(){
+       var row = Math.floor(Math.random()*3+1);
+       var index = Math.floor(Math.random()*2);
+       createGift(row,index)
+    },1250);
+    
+
+
+    </script>
+</body>
+
+</html>

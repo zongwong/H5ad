@@ -1,0 +1,336 @@
+#popup, .popup-shadow {
+    top: 0;
+    width: 3.2rem;
+    height: 100%
+}
+
+* {
+    -ms-touch-action: none;
+    touch-action: none
+}
+
+.hide {
+    display: none
+}
+
+#popup {
+    position: fixed;
+    z-index: 999999
+}
+
+.popup-shadow {
+    position: absolute;
+    opacity: .7;
+    background: #000;
+    z-index: 10
+}
+
+.plugin-act-close, .plugin-act-popup .plugin-popup-mc .btn-rules, .plugin-act-popup .plugin-popup-mc .plugin-act-btn, .plugin-act-popup .plugin-popup-mc .popup-mc-cont, .plugin-act-popup .plugin-rules .rules-close {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute
+}
+
+.plugin-act-close {
+    width: .17rem;
+    height: .17rem;
+    background-image: url(../imgs/close.png);
+    right: .4rem;
+    top: .75rem;
+    z-index: 100
+}
+
+.plugin-act-popup .plugin-popup-mc {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50
+}
+
+.plugin-act-popup .plugin-popup-mc .popup-mc-h {
+    width: 100%;
+    height: .2rem;
+    position: absolute;
+    top: .75rem;
+    left: 0
+}
+
+.plugin-act-popup .plugin-popup-mc .btn-rules {
+    width: .38rem;
+    height: .155rem;
+    background-image: url(../imgs/rules.png);
+    top: .02rem;
+    left: .4rem
+}
+
+.plugin-act-popup .plugin-popup-mc .popup-mc-cont {
+    width: 3.2rem;
+    height: 2.9rem;
+    background-image: url(../imgs/bg1.png);
+    top: 1rem;
+    left: 0;
+    -webkit-animation: animateBg 1s steps(1) infinite;
+    animation: animateBg 1s steps(1) infinite
+}
+
+@-webkit-keyframes animateBg {
+    0%, 100% {
+        background-image: url(../imgs/bg1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    25% {
+        background-image: url(../imgs/bg2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    50% {
+        background-image: url(../imgs/bg3.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    75% {
+        background-image: url(../imgs/bg4.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+@keyframes animateBg {
+    0%, 100% {
+        background-image: url(../imgs/bg1.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    25% {
+        background-image: url(../imgs/bg2.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    50% {
+        background-image: url(../imgs/bg3.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    75% {
+        background-image: url(../imgs/bg4.png);
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+}
+
+.plugin-act-popup .plugin-popup-mc .plugin-act-btn {
+    width: 1.12rem;
+    height: .375rem;
+    background-image: url(../imgs/btn.png);
+    top: 3.45rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.plugin-act-popup .plugin-rules {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50
+}
+
+.plugin-act-popup .plugin-rules .box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.plugin-act-popup .plugin-rules .rules-close {
+    width: .17rem;
+    height: .17rem;
+    background-image: url(../imgs/close.png);
+    top: .72rem;
+    left: 2.59rem
+}
+
+.plugin-act-popup .plugin-rules .rules-content {
+    width: 2.2rem;
+    position: absolute;
+    top: 1.05rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: .03rem solid #f15323;
+    border-radius: .1rem;
+    background: #fff0d5;
+    font-size: .1rem;
+    color: #7b4615;
+    line-height: .16rem;
+    padding: .28rem .18rem .2rem
+}
+
+.plugin-act-popup .plugin-rules .rules-content li {
+    margin-bottom: .05rem
+}
+
+.plugin-act-popup .plugin-rules .rules-content .title {
+    width: 1.32rem;
+    height: .42rem;
+    background-image: url(../imgs/rules-title.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -.25rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.plugin-act-popup .plugin-rules .btn-more {
+    width: 1.64rem;
+    height: .21rem;
+    line-height: .21rem;
+    font-size: .1rem;
+    text-align: center;
+    color: #fff;
+    background: #f15323;
+    margin: .05rem auto .15rem
+}
+
+.plugin-act-popup .plugin-rules .btn-more .icon-more {
+    display: inline-block;
+    vertical-align: -.02rem;
+    width: .11rem;
+    height: .11rem;
+    background-image: url(../imgs/rules-more.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: .05rem;
+    transition: all .3s
+}
+
+.plugin-act-popup .plugin-rules .btn-more .icon-more.show {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.plugin-act-popup .nonepack .cry, .plugin-act-popup .nonepack .playagain {
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute
+}
+
+.plugin-act-popup .plugin-rules .more-content {
+    height: 0;
+    transition: height .3s
+}
+
+.plugin-act-popup .plugin-rules .more-content.show {
+    height: .7rem
+}
+
+.plugin-act-popup .nonepack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50
+}
+
+.plugin-act-popup .nonepack .cry {
+    width: 1.53rem;
+    height: 2.155rem;
+    background-image: url(../imgs/cry.png);
+    top: 1.15rem;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.plugin-act-popup .nonepack .playagain {
+    width: 1.39rem;
+    height: .33rem;
+    background-image: url(../imgs/btn-again.png);
+    top: 3.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 60
+}
+
+.plugin-act-popup .winred {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50
+}
+
+.plugin-act-popup .winred .content {
+    width: 2.5rem;
+    height: 3.04rem;
+    background-image: url(../imgs/award-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: .7rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.plugin-act-popup .winred .order {
+    width: 2.3rem;
+    height: 1.075rem;
+    position: absolute;
+    top: 1.3rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #fff;
+    padding: .035rem .07rem
+}
+
+.plugin-act-popup .winred .order img {
+    width: 100%
+}
+
+.plugin-act-popup .winred .decs {
+    width: 100%;
+    font-size: .12rem;
+    color: #5c5c5c;
+    text-align: center;
+    position: absolute;
+    top: 2.45rem;
+    left: 0
+}
+
+.plugin-act-popup .winred .plugin-coupon-btn {
+    width: 1.43rem;
+    height: .37rem;
+    background-image: url(../imgs/award-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 2.6rem;
+    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}

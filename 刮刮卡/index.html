@@ -1,0 +1,304 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>话费流量免费送~</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201709151615.css">
+    <style>
+    .main {
+        background-image: url(./imgs/jrmypzddjc.webp) !important;
+    }
+
+    body {
+        background-color: #e85d00 !important;
+    }
+
+    .record {
+        background-image: url(./imgs/ked30yoh5u.webp) !important;
+    }
+
+    .rule {
+        background-image: url(./imgs/kt8z8qxzk8.webp) !important;
+    }
+
+    .banner {
+        background-image: url(./imgs/tuyfxqzu2v.webp) !important;
+    }
+
+    #prize-list {
+        background-image: url(./imgs/8tk606acir.webp) !important;
+    }
+
+    .apple {
+        background-color: #e85d00 !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    .code_01 {
+        background-image: url(./imgs/bgcode.webp) !important;
+    }
+
+    .code_02 {
+        background-image: url(./imgs/bgcode.webp) !important;
+    }
+
+    .disableCard {
+        background-image: url(./imgs/card.webp) !important;
+    }
+
+    .start-btn {
+        background-image: url(./imgs/s0gdsv0bz0.webp) !important;
+    }
+
+    .disabled {
+        background-image: url(./imgs/uqpd9e9tnb.webp) !important;
+    }
+
+    .status {
+        color: #fff !important;
+    }
+
+    .start-tip2 {
+        color: #fed349 !important;
+    }
+
+    .jb-wrap .jb {
+        background-image: url(./imgs/jb.webp) !important;
+    }
+    </style>
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #ed7e34 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #ed7e34 !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #e0732b !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #ffffff !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content">
+        <div class="record"></div>
+        <div class="rule"></div>
+        <div class="main">
+            <div class="banner"></div>
+            <div class="contain">
+                <div class="start-btn disabled" style="animation-name: plush-btn;"></div>
+                <div class="jb-wrap">
+                    <div class="jb"></div>
+                </div>
+                <div class="status" id="status-tip">今日免费： 4次</div>
+                <div class="card-wrap">
+                    <div class="code_wrap code-down">
+                        <div class="code_01">
+                            <div class="disableCard"></div>
+                        </div>
+                        <div class="code_02">
+                            <div class="result-show" style="background-color: rgb(255, 255, 255); display: none;">
+                                <div class="result-show-dialog"></div>
+                            </div>
+                            <canvas id="card" style="background-size: cover;"></canvas>
+                            <div class="start-tip2" id="status-tip2" style="display: none;">
+                                <p>快使劲刮我哟~</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="error-show" style="display: none;">
+                    <div class="dialog">
+                        <p></p>
+                        <a class="getCreditsLink" href=""></a>
+                    </div>
+                </div>
+                <span class="bear"></span>
+            </div>
+            <div id="prize-list">
+                <div id="prizes-wrapper" style="padding-left: 20px">
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/z9xouvl7jr.webp"></div>
+                        <p class="prize-name">500元话费</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/8upyu5mt25.webp"></div>
+                        <p class="prize-name">300元话费</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/l186v3shf8.webp"></div>
+                        <p class="prize-name">8G流量包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/dorugjzanp.webp"></div>
+                        <p class="prize-name">4G流量包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.2rem;">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/lucky.webp"></div>
+                        <p class="prize-name">幸运福袋</p>
+                    </div>
+                </div>
+                <div class="prize-tag"></div>
+            </div>
+        </div>
+        <p class="apple" style="display: block;">*奖品与活动和设备生产商Apple Inc.公司无关</p>
+    </div>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller">
+                        <p>还怕不够用？话费流量免费送</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖，每天7次免费抽奖机会。此活动为概率中奖，奖品数量有限，祝好运。</p>
+                        <p>惊喜一：500元话费</p>
+                        <p>惊喜二：300元话费</p>
+                        <p>惊喜三：8G流量包</p>
+                        <p>惊喜四：4G流量包</p>
+                        <p>惊喜五：幸运福袋</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659或客服QQ：400-080-6659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <p>惊喜一：500元话费共5份，中奖概率为0.01%</p>
+                                <p>惊喜二：300元话费共10份，中奖概率为0.02%</p>
+                                <p>惊喜三：8G流量包共20份，中奖概率为0.04%</p>
+                                <p>惊喜四：4G流量包共100份，中奖概率为0.1%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="DB_guide" style="left: 1.8rem; top: 3.6rem; display: block;"><span class="DB_G_circle"></span><span class="DB_G_hand"></span></div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709140000.css">
+        <link rel="stylesheet" href="./css/index_201709290000.css">
+    </div>
+    <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+        <div class="coupon-modal-animate">
+            <div class="coupon-modal-showPrize-dialog">
+                <span class="close coupon-modal-close"></span>
+                <div class="modal-light">
+                    <div class="l-shine"></div>
+                </div>
+                <div class="modal-header"></div>
+                <div class="modal-body withoutCode">
+                    <div class="body-header"></div>
+                    <div class="coupon-wrapper">
+                        <div class="coupon-image">
+                            <img class="J_gotoDetail logandgo" src="./imgs/f9xnhrohdu.jpg">
+                        </div>
+                        <h3 class="coupon-name"><span>恭喜证券投资赚大钱机会</span></h3>
+                    </div>
+                    <div class="body-footer">
+                        <button type="button" class="J_btnCoupon coupon-use">
+                            <div class="btn-title">立即领取</div>
+                        </button>
+                    </div>
+                </div>
+                <i class="decoration"></i>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/card.js"></script>
+    <script>
+        var itemWidth = $('.prize-item').outerWidth();
+        $('#prizes-wrapper').css({'width':itemWidth*($('#prizes-wrapper').children().length+2)+20})
+        new IScroll('#prize-list',{ scrollX: true, scrollY: false, mouseWheel: true ,scrollbars: true})
+
+
+
+  var img = new Image()
+  img.src = './imgs/placeholder.jpg'
+  img.onload = function () {
+    var lottery = new LotteryCard(document.getElementById('card'), { // eslint-disable-line
+      cover: img,
+    })
+    lottery.on('start', function () {
+      lottery.setResult('./imgs/scratch_no.png')
+    })
+    lottery.on('end', function () {
+
+    })
+    window.lottery = lottery
+  }
+
+    </script>
+</body>
+
+</html>

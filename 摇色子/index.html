@@ -1,0 +1,277 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>领VIP看高清</title>
+    <script>
+    ! function(e, i) {
+        var t = e.documentElement,
+            n = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            a = n ? Math.min(i.devicePixelRatio, 3) : 1,
+            m = "orientationchange" in window ? "orientationchange" : "resize";
+        t.dataset.dpr = a;
+        for (var d, l, c = !1, o = e.getElementsByTagName("meta"), r = 0; r < o.length; r++) l = o[r], "viewport" == l.name && (c = !0, d = l);
+        if (c) d.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
+        else {
+            var o = e.createElement("meta");
+            o.name = "viewport", o.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no", t.firstElementChild.appendChild(o)
+        }
+        var s = function() {
+            var e = t.clientWidth;
+            e / a > 640 && (e = 640 * a), window.remScale = e / 640, t.style.fontSize = 200 * (e / 640) + "px"
+        };
+        s(), e.addEventListener && i.addEventListener(m, s, !1)
+    }(document, window);
+    </script>
+    <link rel="stylesheet" href="./css/actBase_201709280000.css">
+    <link rel="stylesheet" href="./css/index_201707271400.css">
+    <style>
+    .main {
+        background-image: url(./imgs/1jecxq4l51.webp) !important;
+    }
+
+    body {
+        background-color: #22eb91 !important;
+    }
+
+    .record {
+        background-image: url(./imgs/prize2.webp) !important;
+    }
+
+    .rule {
+        background-image: url(./imgs/rule2.webp) !important;
+    }
+
+    .apple {
+        color: #fff !important;
+    }
+
+    .apple {
+        background-color: #22eb91 !important;
+    }
+
+    .dice-content.ready {
+        background-image: url(./imgs/dice.webp) !important;
+    }
+
+    .dice-content.end1 {
+        background-image: url(./imgs/result1.webp) !important;
+    }
+
+    .dice-content.end2 {
+        background-image: url(./imgs/result2.webp) !important;
+    }
+
+    .dice-content.end3 {
+        background-image: url(./imgs/result3.webp) !important;
+    }
+
+    .dice-content.end4 {
+        background-image: url(./imgs/result4.webp) !important;
+    }
+
+    .dice-content.end5 {
+        background-image: url(./imgs/result5.webp) !important;
+    }
+
+    .dice-content.end6 {
+        background-image: url(./imgs/result6.webp) !important;
+    }
+
+    .start {
+        background-image: url(./imgs/btn.webp) !important;
+    }
+
+    .start.moving {
+        background-image: url(./imgs/btn_click.webp) !important;
+    }
+
+    .start.end {
+        background-image: url(./imgs/btn_disabled.webp) !important;
+    }
+    </style>
+
+    <link rel="stylesheet" href="./css/common_201709140000.css">
+    <style>
+    .rule-modal .rule-modal-dialog section .probability .nav i {
+        border-top-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+    </style>
+    <style>
+    .rule-modal .rule-modal-dialog {
+        background-color: #2dd328 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability {
+        background-color: #2dd328 !important;
+    }
+
+    .rule-modal .rule-modal-dialog header span,
+    .rule-modal .rule-modal-dialog section .description {
+        color: #fff !important;
+    }
+
+    .rule-modal .rule-modal-dialog header i {
+        background-color: #fff !important;
+    }
+
+    .rule-modal .rule-modal-dialog .close {
+        color: #fff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav {
+        background-color: #29b325 !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability .nav span {
+        color: #ffffff !important;
+    }
+
+    .rule-modal .rule-modal-dialog section .probability.active .text {
+        color: #fff !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="db-content" style="display: block;">
+        <div class="record"></div>
+        <div class="rule"></div>
+        <div class="main">
+            <img class="banner" src="./imgs/mkfedbfof0.webp">
+            <!-- style="animation-play-state: paused;" -->
+            <div class="dice" >
+                <div class="dice-content ready"></div>
+            </div>
+            <i class="coin1"></i>
+            <i class="coin2"></i>
+            <i class="coin3"></i>
+            <div class="start ready"></div>
+            <div class="needCredits">今日免费： 6次</div>
+            <div class="prize-list" style="animation-play-state: paused;" id="prize-list">
+                <div id="prizes-wrapper" style="width: 5.8rem; padding-left: 0.2rem; padding-right: 0.2rem;">
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24114" data-type="physical">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/nl6pglrifv.webp"></div>
+                        <p class="prize-name">优酷视频VIP</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24113" data-type="physical">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/9d3jxvn2e2.webp"></div>
+                        <p class="prize-name">爱奇艺VIP</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24112" data-type="physical">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/j42wzpmtc0.webp"></div>
+                        <p class="prize-name">腾讯视频VIP</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24115" data-type="physical">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/2st9asyhd4.webp"></div>
+                        <p class="prize-name">10元红包</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24111" data-type="lucky">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/lucky.webp"></div>
+                        <p class="prize-name">幸运福袋</p>
+                    </div>
+                    <div class="prize-item" style="display: inline-block; margin-right: 0.15rem;" data-id="24110" data-type="thanks">
+                        <div class="prize-img-box"><img class="prize-img" src="./imgs/thanks.webp"></div>
+                        <p class="prize-name">谢谢参与</p>
+                    </div>
+                </div>
+                <div class="prize-tag"></div>
+            </div>
+        </div>
+    </div>
+    <p class="apple" style="display: block;">*奖品和活动均与设备生产商Apple Inc.无关</p>
+    <div class="rule-modal" style="display: none;">
+        <div class="rule-modal-dialog">
+            <header><i></i><span>活动说明</span><i></i></header>
+            <section>
+                <div class="description" style="overflow: hidden;">
+                    <div class="description-scroller">
+                        <p>领了这个VIP，瞬间身份抬高，逼格满满。</p>
+                        <p>活动说明：参与活动即有机会获得幸运奖~每天可免费参与7次。此活动为概率中奖，奖品数量有限，祝好运！</p>
+                        <p>惊喜一：爱奇艺VIP</p>
+                        <p>惊喜二：腾讯视频VIP</p>
+                        <p>惊喜三：优酷视频VIP</p>
+                        <p>惊喜四：10元红包</p>
+                        <p>惊喜五：幸运奖</p>
+                        <p>－－－－－－－－－－－－－－－－</p>
+                        <p>重要声明</p>
+                        <p>1、实物类奖品将在活动结束后5-10个工作日安排发货，请耐心等待</p>
+                        <p>2、优惠券类奖品的使用规则详见每个优惠券的介绍页</p>
+                        <p>3、请兑换后仔细阅读使用流程，如有疑问，可直接联系客服专线：400-080-6659或客服QQ：4000806659（工作日9:00至18:00）</p>
+                        <p>4、通过非法途径获得奖品的，主办方有权不提供奖品</p>
+                    </div>
+                </div>
+                <div class="probability">
+                    <div class="nav"><span>更多概率说明</span><i></i></div>
+                    <div class="text">
+                        <div class="probability-wrapper" style="overflow: hidden;">
+                            <div class="probability-scroller">
+                                <p>一、爱奇艺VIP，共5份，中奖概率0.01%</p>
+                                <p>二、腾讯视频VIP，共5份，中奖概率0.01%</p>
+                                <p>三、优酷视频VIP，共5份，中奖概率0.01%</p>
+                                <p>四、10元红包，共100份，中奖概率0.1%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="close"></div>
+        </div>
+    </div>
+    <div class="DB_guide" style="left: 1.8rem; top: 3.3rem; display: block;"><span class="DB_G_circle"></span><span class="DB_G_hand"></span></div>
+    <div class="modal-group">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709062000.css">
+        <link rel="stylesheet" href="./css/index_201708211647.css">
+        <link rel="stylesheet" href="./css/index_201709140000.css">
+        <link rel="stylesheet" href="./css/index_201709141600.css">
+    </div>
+    <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+        <div class="coupon-modal-animate">
+            <span class="close coupon-modal-close"></span>
+            <div class="coupon-modal-showPrize-dialog">
+                <div class="modal-body withoutCode">
+                    <i class="coupon-dice" style="background-image:url(./imgs/result5.png);"></i>
+                    <p class="modal-title">免费领取蓝光手表</p>
+                    <div class="coupon-image">
+                        <img class="J_gotoDetail logandgo" src="./imgs/a2flposj2n.jpg">
+                    </div>
+                    <button type="button" class="J_btnCoupon coupon-use">
+                        <div class="coupon-btn"></div>
+                    </button>
+                </div>
+                <i class="light"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/iscroll.js"></script>
+    <script>
+       var itemWidth = $('.prize-item').outerWidth();
+        $('#prizes-wrapper').css({'width':itemWidth*($('#prizes-wrapper').children().length+2)})
+        new IScroll('#prize-list',{ scrollX: true, scrollY: false, mouseWheel: true ,scrollbars: true})
+
+      $('.start').on('click',function(){
+        $('.dice-content').addClass('moving').removeClass('ready');
+        $(this).addClass('end').removeClass('ready');
+        setTimeout(function(){
+          $('.dice-content').removeClass('moving').addClass('end2');
+          $('.start').addClass('ready').removeClass('end');
+        },1500)
+      })
+
+      $('.prize-item').on('click',function(){
+        $('.prize-detail-modal').addClass('show');
+      })
+      $('.prize-detail-slideup').on('click',function(){
+        $('.prize-detail-modal').removeClass('show');
+      })
+    </script>
+</body>
+
+</html>
