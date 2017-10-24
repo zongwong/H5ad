@@ -28,8 +28,6 @@
     }(document, window);
     </script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
-    <!-- 同步 tuia-h5/unit/layout/baseCss.html -->
-    <!-- 活动工具首屏加载公用js、css -->
     <link rel="stylesheet" href="./css/actBase_201709280000.css">
     <link rel="stylesheet" href="./css/index_201707271400.css">
     <style>
@@ -186,11 +184,12 @@
         </div>
         <p class="apple">*奖品和活动均与设备生产商Apple Inc.无关</p>
     </div>
+    <!-- 规则 -->
     <div class="rule-modal" style="display: none;">
         <div class="rule-modal-dialog">
             <header><i></i><span>活动说明</span><i></i></header>
             <section>
-                <div class="description" style="overflow: hidden;">
+                <div class="description" style="overflow: auto;">
                     <div class="description-scroller">
                         <p>追剧领红包，领到你手软~</p>
                         <p>活动说明：参与活动即有机会获得幸运奖~每天可免费参与8次。此活动为概率中奖，奖品数量有限，祝好运！</p>
@@ -211,7 +210,7 @@
                 <div class="probability">
                     <div class="nav"><span>更多概率说明</span><i></i></div>
                     <div class="text">
-                        <div class="probability-wrapper" style="overflow: hidden;">
+                        <div class="probability-wrapper" style="overflow: auto;">
                             <div class="probability-scroller">
                                 <p>iphone7共1份，中奖概率为0.01%</p>
                                 <p>1000元红包共2份，中奖概率为0.03%</p>
@@ -575,7 +574,7 @@
     <div class="hotpot"></div>
   </div>
 </a>
-<!-- 弹框 -->
+<!-- 中奖弹框 -->
 <link rel="stylesheet" href="./css/index_201710111020.css">
 <div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
     <div class="coupon-modal-animate">
@@ -616,9 +615,46 @@
         </div>
     </div>
 </div>
+<div class="prize-detail-modal" style="display: block;">
+    <div class="prize-detail-dialog">
+        <div class="prize-detail-slidebox" style="display: block;">
+            <div class="prize-detail-content" style="transform: translate(0px, 0px) translateZ(0px);"><img class="prize-detail-img" src="//yun.yuyiya.com/tuia-media/img/ovc62lapzx.jpg">
+                <div class="prize-detail-info">
+                    <h3>香港美心月饼</h3>
+                    <p></p>
+                </div>
+                <div class="prize-detail-description">
+                    <h3></h3>
+                    <p><span style="color: rgb(51, 51, 51); font-size: 16px;"></span>美心月饼流心奶黄月饼，粒粒迷你，口口软糯，口口美味</p>
+                    <p>商品名称：美心月饼流心奶黄月饼</p>
+                    <p>品牌：香港美心</p>
+                    <p>配料表：参照包装</p>
+                    <p>储藏方法： 请置于阴凉通风处</p>
+                    <p>产地：香港</p>
+                    <p>
+                        <br>
+                    </p>
+                    <p>【领取说明】</p>
+                    <p>获奖后，请填写送货信息（姓名、手机号码、地址），我们会在5-10个工作日内为您发货，若因地址不详、联系号码错误、停机等个人原因导致快递多次配送不成功，延期退回后我们将不再进行二次发货，敬请谅解</p>
+                    <p>
+                        <br>
+                    </p>
+                    <p>【特别说明】</p>
+                    <p>请领奖后后仔细阅读使用流程，若有疑问，可直接联系客服专线：400-080-6659或客服QQ：4000806659（工作日9:00至18:00）</p>
+                    <p>新疆、西藏、青海、宁夏、内蒙古地区不在包邮范围</p>
+                </div>
+            </div>
+        </div><i class="prize-detail-slideup"></i>
+        <div class="prize-detail-loading" style="display: none;"><i></i>
+            <p>正在获取奖品信息,请稍后...</p>
+        </div>
+    </div>
+</div>
+
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/iscroll.js"></script>
+    <script src="../public/js/common.js"></script>
     <script>
       
         var itemWidth = $('.prize-item').outerWidth();
@@ -630,6 +666,7 @@
             eggtimer:null,
             chuizitimer:null,
             index:0,
+            isSmash:false,
             okegg:[],
             getOkegg:function(){
               var $eggs = $('.egg');
@@ -682,6 +719,10 @@
                 }
             },
             eggClick:function(){
+              if (game.isSmash) {
+                return false;
+              }
+              game.isSmash = true;
               var $this = $(this);
               clearInterval(game.eggtimer);
               var chuiziPos = $('.chuizi').position();
@@ -692,26 +733,29 @@
                 left:left
               },function(){
                 setTimeout(function(){
+                  game.isSmash = false;
                   $this.addClass('active smashed');
+                  J_modalShowPrize.show(function(){
+                    $('.chuizi').css({
+                      top: chuiziPos.top,
+                      left: chuiziPos.left
+                    })
+                    game.getOkegg();
+                    game.index = 0;
+                    game.eggtimer = setInterval(game.eggJump, 400);
+                  });
                 }, 1000);
               })
               
               setTimeout(function(){
-                $('.chuizi').css({
-                  top: chuiziPos.top,
-                  left: chuiziPos.left
-                })
-              }, 2000);
-              
-
-              setTimeout(function(){
-                game.getOkegg();
-                game.index = 0;
-                game.eggtimer = setInterval(game.eggJump, 400);
-              },4000);
+                
+              }, 1200);
+          
             }
         }
         game.start();
+
+
     </script>
 </body>
 
